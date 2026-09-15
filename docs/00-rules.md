@@ -12,7 +12,7 @@ big tech-এর system design রাউন্ড **৪৫ মিনিট, ম�
 
 1. `brainstorming/ASSUMPTIONS.md`
 2. `brainstorming/` — `system-design-how-many-paths.md`, `system-design-what-works-for-faang.md`
-3. `switch_global_company_in_6_month/` — ঐ plan-এর দিন ০০৮–১৭৫-এর system design-এর ঘর এই সাইটের দিন ০০১–১৬৮
+3. `switch_in_6_month_global_company/` — ঐ plan-এর দিন ০০৮–১৭৫-এর system design-এর ঘর এই সাইটের দিন ০০১–১৬৮
 4. এই ফোল্ডার — `docs/`
 
 **স্বাধীন পথ।** আগে অন্য কোনো system design সাইট শেষ করতে হয় না — এই সাইট ছয় সেকশনের ছাঁচ থেকেই শুরু করে। [লোকাল](https://sojibrd.github.io/system_design_local_company/) আর [রিমোট](https://sojibrd.github.io/system_design_remote_company/) আলাদা সাইট, আর সেখানে কাজের ধরন আলাদা: লোকালে নিজের সিস্টেম ব্যাখ্যা, রিমোটে লিখে বোঝানো। এখানে ঘড়ির নিচে মুখে — ২৫টা ডক মুখস্থ করেও এই রাউন্ড পার হয় না, যদি বলার অনুশীলন না থাকে।

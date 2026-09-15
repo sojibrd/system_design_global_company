@@ -2,7 +2,7 @@
 
 big tech মানের কোম্পানির ৪৫ মিনিটের system design রাউন্ড আর frontend design রাউন্ডের প্রস্তুতি — দেশে থেকে, রিমোটে। ১৬৮ দিনে: design doc-এর ছয় সেকশন আর frontend-এর ছয় ধাপ, আট সিস্টেমের ইংরেজি design doc (URL shortener, rate limiter, `srdtube`, chat, news feed, file storage, ride sharing, video streaming), প্রতিটা ৪৫′ টাইমারে মুখে, ছয়টা UI, আর শেষে এলোমেলো তুলে ঘড়ির নিচে। শেখার বিজ্ঞান মেনে; দিন ১৬৮-এ থামা।
 
-এটা **স্বাধীন পথ** — আগে অন্য কোনো system design সাইট লাগে না। [লোকাল](https://sojibrd.github.io/system_design_local_company/) আর [রিমোট](https://sojibrd.github.io/system_design_remote_company/) আলাদা সাইট; এখানে পথ বদলালে কাজের ধরনই বদলায়। `switch_global_company_in_6_month`-এর দিন ০০৮–১৭৫-এ system design-এর যে ঘরগুলো আছে (বেশিরভাগ মঙ্গল, বৃহস্পতি, শনি, রবি), এই সাইট সেই ঘরের কাজ — plan থেকে হুবহু সরানো (ব্যবহারকারীর সিদ্ধান্ত ২০২৬-০৯-১৫)। শুরুর তারিখ ⏳, সাইট প্রথমবার খুললে জিজ্ঞেস করে।
+এটা **স্বাধীন পথ** — আগে অন্য কোনো system design সাইট লাগে না। [লোকাল](https://sojibrd.github.io/system_design_local_company/) আর [রিমোট](https://sojibrd.github.io/system_design_remote_company/) আলাদা সাইট; এখানে পথ বদলালে কাজের ধরনই বদলায়। `switch_in_6_month_global_company`-এর দিন ০০৮–১৭৫-এ system design-এর যে ঘরগুলো আছে (বেশিরভাগ মঙ্গল, বৃহস্পতি, শনি, রবি), এই সাইট সেই ঘরের কাজ — plan থেকে হুবহু সরানো (ব্যবহারকারীর সিদ্ধান্ত ২০২৬-০৯-১৫)। শুরুর তারিখ ⏳, সাইট প্রথমবার খুললে জিজ্ঞেস করে।
 
 **লাইভ:** https://sojibrd.github.io/system_design_global_company/
 
@@ -43,7 +43,7 @@ big tech মানের কোম্পানির ৪৫ মিনিটে�
 
 ### তথ্য বদলানোর ক্রম
 
-`brainstorming/ASSUMPTIONS.md` → `brainstorming/` (`system-design-*.md`) → `switch_global_company_in_6_month/docs/` → এই ফোল্ডার। plan-এর design-এর ঘর আর এই সাইটের দিন একসাথে বদলান — সাইটের দিন = plan-এর দিন − ৭।
+`brainstorming/ASSUMPTIONS.md` → `brainstorming/` (`system-design-*.md`) → `switch_in_6_month_global_company/docs/` → এই ফোল্ডার। plan-এর design-এর ঘর আর এই সাইটের দিন একসাথে বদলান — সাইটের দিন = plan-এর দিন − ৭।
 
 ### ব্লক ফাইলের ছাঁচ
 
