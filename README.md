@@ -43,7 +43,7 @@ big tech মানের কোম্পানির ৪৫ মিনিটে�
 
 ### তথ্য বদলানোর ক্রম
 
-`legacy_and_wisdom/docs/ASSUMPTIONS.md` → `brainstorming/` (`system-design-*.md`) → `switch_global_company_in_6_month/docs/` → এই ফোল্ডার। plan-এর design-এর ঘর আর এই সাইটের দিন একসাথে বদলান — সাইটের দিন = plan-এর দিন − ৭।
+`brainstorming/ASSUMPTIONS.md` → `brainstorming/` (`system-design-*.md`) → `switch_global_company_in_6_month/docs/` → এই ফোল্ডার। plan-এর design-এর ঘর আর এই সাইটের দিন একসাথে বদলান — সাইটের দিন = plan-এর দিন − ৭।
 
 ### ব্লক ফাইলের ছাঁচ
 

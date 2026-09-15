@@ -10,7 +10,7 @@ big tech-এর system design রাউন্ড **৪৫ মিনিট, ম�
 
 ## সত্যের উৎস
 
-1. `legacy_and_wisdom/docs/ASSUMPTIONS.md`
+1. `brainstorming/ASSUMPTIONS.md`
 2. `brainstorming/` — `system-design-how-many-paths.md`, `system-design-what-works-for-faang.md`
 3. `switch_global_company_in_6_month/` — ঐ plan-এর দিন ০০৮–১৭৫-এর system design-এর ঘর এই সাইটের দিন ০০১–১৬৮
 4. এই ফোল্ডার — `docs/`
