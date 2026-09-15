@@ -9,28 +9,30 @@ big tech মানের কোম্পানির ৪৫ মিনিটে�
 ## Functional Requirement
 
 - **আজ (`/`):** প্রথমবার খুললে শুরুর তারিখ জিজ্ঞেস করে। তারপর দেখায় ক্যালেন্ডারের আজকের দিনটা, এই ক্রমে: জমে থাকা ⚑ → আজকের ঝালাই → আজকের দিন।
-- **Rail:** ৪টা পাতার লিংক, gauge আর ৬টা ব্লক। শুধু খোলা ব্লকের দিনগুলো দেখায়।
+- **Rail:** ৫টা পাতার লিংক, gauge আর ৬টা ব্লক। শুধু খোলা ব্লকের দিনগুলো দেখায়।
 - **দিন (`/day/<nnn>/`) · ব্লক (`/block/<slug>/`):** প্রতিটা ক্যালেন্ডার দিন আছে; plan-এ design-এর ঘর না থাকলে দিনটা "বিরতি", কেন ফাঁকা তা লেখা।
-- **সূত্রের chip:** কাজে `(ডক ১৩)` থাকলে `system_design` সাইটের ঐ ডকের লিংক; `(sim url-shortener · scalable)` থাকলে simulator-এর ঐ সিস্টেম।
-- **ডক (`/docs/`, `/doc/<nn>/`):** ২৫টা ডকের কোনটা এই পথের কোন দিনের কোন কাজে আসে; বাইরেরগুলো আলাদা নিচে।
+- **সূত্রের chip:** কাজে `(ডক ১৩)` থাকলে এই সাইটের ঐ ডকের পাতা; `(sim url-shortener · scalable)` থাকলে এই সাইটের simulator-এর ঐ সিস্টেম।
+- **ডক (`/docs/`, `/doc/<nn>/`):** ২৫টা ডক এই সাইটেই (`guide/`)। প্রতিটা পাতায় আগে এই পথের কোন দিনের কোন কাজে আসে, তারপর পুরো ডক; plan-এর বাইরেরগুলো তালিকায় আলাদা নিচে।
+- **simulator (`/simulation/<id>/`):** URL Shortener আর Rate Limiter, তিন লেভেল (functional → reliable → scalable) — React Flow-র ক্যানভাসে ধাপে ধাপে।
 - **ঝালাই (`/review/`):** প্রতিটা 🔁 কাজ টিকের দিন থেকে ১/৩/৭/২১ দিন পরে ফেরে।
 - **নিয়ম (`/rules/`):** `docs/00-rules.md` হুবহু।
 - **🧠 chip:** `learning_to_learn`-এর পাঁচটা ডকের সব বিষয়। chip চাপলে এক লাইনে কারণ, সাথে ঐ সাইটের লিংক।
 
 ## Non-Functional Requirement
 
-- **সত্যের উৎস `docs/`।** কোডে কোনো দিন বা কাজ হার্ডকোড নেই। কাজের `(ডক n)` বা `(sim … · …)` যদি `app/lib/sources.ts`-এ না মেলে, **build ভাঙে।**
-- **design doc-এর লেখা এই repo-তে নয়** — `system_design/designs/`-এ। সাইটে নোটের ঘর নেই, ইচ্ছাকৃত।
+- **সত্যের উৎস `docs/`।** কোডে কোনো দিন বা কাজ হার্ডকোড নেই। কাজের `(ডক n)` যদি `guide/`-এ না থাকে বা `(sim … · …)` যদি `app/lib/sources.ts`-এ না মেলে, **build ভাঙে।** simulator-এর ভেতরের রেফারেন্স ধরে `npm run check:simulations` (CI-তে build-এর আগে)।
+- **design doc-এর লেখা এই repo-তে নয়** — প্রজেক্টের নিজের repo-তে (`srdtube`-এর `DESIGN.md`)। সাইটে নোটের ঘর নেই, ইচ্ছাকৃত।
 - **ফাইলে তারিখ নেই।** "আজ" মানে ক্যালেন্ডারের তারিখ, plan পেছায় না।
 - **Static export → GitHub Pages।** Backend নেই। Progress শুধু `localStorage`-এ, একমাত্র `app/hooks/useProgress.ts` দিয়ে। `app/lib/plan.ts` server-only।
 - **Theme contract অলঙ্ঘনীয়, সাইট dark-only।**
-- **তিন পথের কোড একই।** পার্থক্য শুধু `app/lib/site.ts`, `next.config.ts`-এর basePath আর `docs/`-এ।
-- **স্ট্যাক:** Next.js 16, React 19, TypeScript, Tailwind v4, react-markdown।
+- **তিন পথের কোড একই।** পার্থক্য শুধু `app/lib/site.ts`, `next.config.ts`-এর basePath, `package.json`-এর নাম আর `docs/`-এ; `guide/` তিনটাতেই এক।
+- **স্ট্যাক:** Next.js 16, React 19, TypeScript, Tailwind v4, react-markdown, React Flow (`@xyflow/react`), lucide-react।
 
 ## ডক ইনডেক্স
 
 | ফাইল | Gist |
 |---|---|
+| [guide/](guide/) | ২৫টা system design ডক — অবসরপ্রাপ্ত `system_design` থেকে হুবহু, তিন পথে এক |
 | [docs/00-rules.md](docs/00-rules.md) | লক্ষ্য, সত্যের উৎস, চিহ্ন, "আজ", plan-এর ঘর আর বিরতির দিন, ছয় সেকশন, ৪৫′-এর বসা, frontend-এর ছয় ধাপ, আট সিস্টেম, ঝালাই, `learning_to_learn`, যা করবেন না, দিন ১৬৮-এর পরে |
 | [docs/01-templates.md](docs/01-templates.md) | দিন ০০১–০২৮ (plan ০০৮–০৩৫): ছয় সেকশন আর ছয় ধাপের কার্ড, দুই পুরনো সিস্টেমের অনুমান, autocomplete, `srdtube`-এর doc |
 | [docs/02-out-loud.md](docs/02-out-loud.md) | দিন ০২৯–০৫৬ (plan ০৩৬–০৬৩): URL shortener, rate limiter, `srdtube` ৪৫′-এ মুখে; scoping; চারটা ধারণা; chat-এর doc |
@@ -49,7 +51,7 @@ big tech মানের কোম্পানির ৪৫ মিনিটে�
 
 - `# ব্লক ১ — নাম` · `*দিন ০০১–০২৮ · plan-এর দিন ০০৮–০৩৫*` (শেষে `· dip` থাকলে হোমে সতর্কতা) · `> **ব্লক শেষে:** …` · `### দিন ০০৭ · শিরোনাম` · `- [ ] ২৫′ …` · `> **দিন শেষে:** …`
 - দিনের নম্বর সব ব্লক মিলিয়ে পরপর থাকতে হবে, না থাকলে build ভাঙে। কাজ ছাড়া দিন (`### দিন ০০১ · বিরতি`) চলে।
-- কাজে `(ডক ১৩)` বা `(ডক ১১ · ডক ১৩)` = `system_design`-এর ডক; `(sim rate-limiter · scalable)` = simulator। তালিকা `app/lib/sources.ts`-এ।
+- কাজে `(ডক ১৩)` বা `(ডক ১১ · ডক ১৩)` = `guide/`-এর ডক (ফাইল না থাকলে build ভাঙে); `(sim rate-limiter · scalable)` = simulator, তালিকা `app/lib/sources.ts`-এ — `app/lib/simulations/`-এ সিস্টেম বা লেভেল যোগ হলে ওখানেও।
 - `⚑` = মাইলফলক, `🔁` = ঝালাই হবে, শেষে `🧠 (নাম · নাম)`। নতুন 🧠 নাম লিখলে তিন repo-র `app/lib/principles.ts`-এ যোগ করুন।
 
 ### Progress key
@@ -66,6 +68,7 @@ big tech মানের কোম্পানির ৪৫ মিনিটে�
 ```bash
 npm install
 npm run dev      # http://localhost:3000
+npm run check:simulations   # simulator-এর node/edge রেফারেন্স (node ≥ 22.6)
 npm run build    # static export → out/
 ```
 
