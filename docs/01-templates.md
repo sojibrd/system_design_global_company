@@ -88,6 +88,6 @@ big tech-এর system design রাউন্ড ৪৫ মিনিট, মু�
 
 ### দিন ০২৮ · design doc — srdtube
 
-- [ ] ৫০′ ⚑ `srdtube`-এর **design doc, ইংরেজিতে, ছয় সেকশন** — কী বানিয়েছি → কতজন ব্যবহারকারী ধরে (quota থেকে হিসাব) → সিদ্ধান্ত (৫০-id batching, auto-pagination বন্ধ) → যা বাদ দিলাম → গঠন → কোথায় ভাঙবে; বুলেটে, এক বসায় (ডক ১৩ · ডক ১৫) 🧠 (Active learning · Trunk based knowledge)
+- [ ] ৫০′ ⚑ `srdtube`-এর **design doc, ইংরেজিতে, ছয় সেকশন** — কী বানিয়েছি → কতজন ব্যবহারকারী ধরে (quota থেকে হিসাব) → সিদ্ধান্ত (৫০-id batching, auto-pagination বন্ধ) → যা বাদ দিলাম → গঠন → কোথায় ভাঙবে; বুলেটে, এক বসায়, `system_design/designs/srdtube-small-static.md`-এ — আগে থেকে থাকলে ওটাই বদলান (ডক ১৩ · ডক ১৫) 🧠 (Active learning · Trunk based knowledge)
 
 > **দিন শেষে:** ছয় সেকশনই লেখা?
